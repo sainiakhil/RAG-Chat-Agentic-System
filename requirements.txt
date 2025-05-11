@@ -1,0 +1,10 @@
+streamlit
+google-generativeai
+python-dotenv
+mysql-connector-python # For synchronous database access in db_tools_sync.py
+
+aiohttp         # For async HTTP requests in downloader.py
+aiofiles        # For async file operations in downloader.py and processor.py
+aiomysql        # For async database access in processor.py (if you kept it async)
+                # If processor.py was also made synchronous, you might not need aiomysql.
+Pillow
