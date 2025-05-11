@@ -35,12 +35,11 @@
 1.  **Prerequisites:**
     *   Python 3.8+
     *   MySQL Server installed and running.
-    *   A Google Cloud Project with the "Generative Language API" (or Vertex AI API for Gemini) enabled and an API key.
-
+      
 2.  **Clone the Repository:**
     ```bash
-    git clone <your-repository-url>
-    cd <repository-name>
+    git clone <https://github.com/sainiakhil/RAG-Chat-Agentic-System/tree/main>
+    cd <RAG-Chat-Agentic-System>
     ```
 
 3.  **Create a Virtual Environment (Recommended):**
@@ -142,11 +141,6 @@
 *   **Configuration Management:** Use a more structured configuration approach if the project grows (e.g., Pydantic for settings).
 *   **Deployment:** Package the application for deployment (e.g., using Docker).
 
-## Troubleshooting
-
-*   **"Attached to a different loop" errors (if using async versions):** Ensure `nest_asyncio.apply()` is used at the top of your Streamlit script if you revert to async operations.
-*   **DB Connection Issues:** Verify MySQL credentials in `.env` and that the MySQL server is running and accessible. Check `config.py` loads them correctly.
-*   **`GOOGLE_API_KEY` not found:** Ensure the environment variable is set correctly and accessible to your Python process.
 *   **LLM Not Using Tool Correctly:** This is often a prompt engineering issue. Refine the `system_instruction` in `agent_gemini_sync.py` and the tool description. Check the logs to see what arguments the LLM is trying to use.
 *   **Pipeline Failures:** Check logs from `run_pipeline.py`, `downloader.py`, and `processor.py` for errors related to API access, data parsing, or database inserts.
 
